@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+
+    <style>
+
+        .area{
+
+            height: 100px;
+            width: 200px;
+            background-color: #555;
+            font-size: 20px;
+            color: #fff;
+
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!--<element event="Javascript kodu...">-->
+<!--<element event='Javascript kodu...'>-->
+
+<button  onclick="this.innerHTML='Hesaplandı!!!'">Hesapla</button>
+
+<input type="text" onchange="console.log('Değişti...!!')">
+
+<select id="liste" onchange='document.getElementById("container").innerHTML = this.value;'>
+    <option>Ankara</option>
+    <option>Bursa</option>
+    <option>Ceyhan</option>
+</select>
+
+<div id="container"></div>
+
+<div class="area" onmouseover="areaMouseOver()" onmouseout="this.innerHTML = 'ayrildi...'">
+
+</div>
+
+<script>
+
+
+    function areaMouseOver(){
+        document.getElementsByClassName("area")[0].innerHTML = 'uzerinde';
+    }
+
+    document.getElementById("container").innerHTML = document.getElementById("liste").value;
+
+</script>
+
+
+
+</body>
+</html>
